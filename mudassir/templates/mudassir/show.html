@@ -1,0 +1,27 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+    </tr>
+
+    {% for i in list %}
+     <tr>
+    <td>{{ i.name }}</td>
+    <td>{{ i.phone }}</td>
+    <td>{{ i.city }}</td>
+         <td>
+             <a href="/abc/delete/{{ i.id }}">Delete</a>
+         </td>
+         <td>
+             <a href="/abc/edit/{{ i.id }}">Edit</a>
+         </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/abc/create/">To ad more record click me</a>
+{% else %}
+<h1>There is no record yet</h1>
+<a href="/abc/create/">To Add New Record click me</a>
+{% endif %}

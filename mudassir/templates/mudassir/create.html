@@ -1,0 +1,12 @@
+<form method="POST" action="/abc/add/">
+    {% csrf_token %}
+    <label>Name:</label>
+    <div>{{ person.name }}</div>
+    <label>Phone:</label>
+    <div>{{ person.phone }}</div>
+    <label>city:</label>
+    <div>{{ person.city }}</div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>

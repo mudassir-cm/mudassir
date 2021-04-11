@@ -1,0 +1,16 @@
+<form method="POST" action="/abc/update/{{ person.id }}">
+    {% csrf_token %}
+    <labe>Name:</labe>
+    <div>
+        <input name="name" value="{{ person.name }}" required>
+    </div>
+    <label>Phone:</label>
+    <div>
+        <input name="phone" value="{{ person.phone }}" required>
+    </div>
+    <label>city:</label>
+    <div>
+        <input name="city" value="{{ person.city }}" required>
+    </div>
+    <button type="submit">Update</button>
+</form>
